@@ -1,0 +1,45 @@
+:root {
+    --f: firebrick;
+  }
+  
+  h1 {
+    color: cornsilk;
+    font-family: calibri;
+  }
+  
+  h2 {
+    color: cornsilk;
+    font-family: calibri;
+  }
+
+  body {
+    color: aliceblue;
+    background-color: rgb(50, 50, 50);
+  }
+  
+	.ctrtxt {
+		color: cornsilk;
+		font-family: monospace;
+		text-align: center;
+        padding: .3em
+	}
+
+  .lovely {
+    color: palevioletred;
+  }
+  
+  .skylark {
+    color: cornflowerblue !important;
+  }
+
+  .qt {
+		color: pink;
+		font-family: calibri;
+        padding: .3em
+	}
+
+	.swag {
+		color: gold;
+		font-family: calibri;
+        padding: .3em
+	}
