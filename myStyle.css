@@ -1,45 +1,45 @@
 :root {
-    --f: firebrick;
-  }
-  
-  h1 {
-    color: cornsilk;
-    font-family: calibri;
-  }
-  
-  h2 {
-    color: cornsilk;
-    font-family: calibri;
-  }
+  --f: firebrick;
+}
 
-  body {
-    color: aliceblue;
-    background-color: rgb(50, 50, 50);
-  }
-  
-	.ctrtxt {
-		color: cornsilk;
-		font-family: monospace;
-		text-align: center;
-        padding: .3em
-	}
+h1 {
+  color: cornsilk;
+  font-family: calibri;
+}
 
-  .lovely {
-    color: palevioletred;
-  }
-  
-  .skylark {
-    color: cornflowerblue !important;
-  }
+h2 {
+  color: cornsilk;
+  font-family: calibri;
+}
 
-	.swag {
-		color: gold;
-		font-family: calibri;
-        padding: .3em
-	}
+body {
+  color: aliceblue;
+  background-color: rgb(50, 50, 50);
+}
 
-  .qt {
-		color: pink;
-		font-family: calibri;
-        padding: .3em
-	}
+.ctrtxt {
+  color: cornsilk;
+  font-family: monospace;
+  text-align: center;
+  padding: .3em
+}
+
+.lovely {
+  color: palevioletred;
+}
+
+.skylark {
+  color: cornflowerblue !important;
+}
+
+.swag {
+  color: gold;
+  font-family: calibri;
+  padding: .3em
+}
+
+.qt {
+  color: pink;
+  font-family: calibri;
+  padding: .3em
+}
