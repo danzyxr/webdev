@@ -22,6 +22,54 @@
 //     }
 // }
 
-for (let i = 0; i < 13; i++) {
-    console.log(i)
+// let doubled = 1;
+// for (let i = 0; i < 10; i++) {
+//     doubled = doubled * 2;
+//     console.log(doubled);
+// }
+
+// let n = 20;
+// while (true) {
+//     if (n % 7 == 0) {
+//         console.log(n);
+//         break;
+//     }
+//     n++;
+// }
+
+// switch (prompt("What's the weather like?")) {
+//     case "rainy":
+//         console.log("Bring an umbrella.");
+//         break;
+//     case "sunny":
+//         console.log("Dress lightly.");
+//     case "cloudy":
+//         console.log("Go outside!");
+//         break;
+//     default:
+//         console.log("Idk...");
+//         break;
+// }
+
+// looping a triangle
+
+let hash = "#";
+for (let i = 0; i < 7; i++) {
+    console.log(hash);
+    hash += '#';
+}
+
+// using string.length
+
+for (let muns = '$'; muns.length <= 7; muns += '$') {
+    console.log(muns);
+}
+
+let star = '*'
+while (true) {
+    if (star.length > 7) {
+        break;
+    }
+    console.log(star);
+    star += '*';
 }
