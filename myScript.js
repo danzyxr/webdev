@@ -59,11 +59,13 @@ for (let i = 0; i < 7; i++) {
     hash += '#';
 }
 
-// using string.length
+// triangle w/ string.length
 
 for (let muns = '$'; muns.length <= 7; muns += '$') {
     console.log(muns);
 }
+
+// triangle w/ while loop
 
 let star = '*'
 while (true) {
@@ -73,3 +75,44 @@ while (true) {
     console.log(star);
     star += '*';
 }
+
+// fizzbuzz
+
+for (let i = 1; i <= 100; i++) {
+    if ((i % 3 == 0) & (i % 5 == 0)) {
+        console.log(i + ": fizzbuzz");
+    }
+    else if (i % 3 == 0) {console.log(i + ": fizz");}
+    else if (i % 5 == 0) {console.log(i + ": buzz");}
+}
+
+// chessboard
+
+let chess = " # # # #\n# # # # \n # # # #\n# # # # \n # # # #\n# # # # \n # # # #\n# # # # \n";
+console.log(chess);
+
+// chessboard w/ for loop
+
+let row_1 = " # # # #";
+let row_2 = "# # # # ";
+for (let i = 1; i <= 8; i++) {
+    if (i % 2 != 0) {console.log(row_1);}
+    else {console.log(row_2);}
+}
+
+// modify for n x n grid
+// I forgot that I can += a string... ugh
+
+// FUNCTIONS!!
+
+const makeNoise = function() {
+    console.log("Pling!");
+}
+
+makeNoise();
+
+const power = function(base, exponent) {
+    return base ** exponent;
+}
+
+console.log(power(3, 2));
