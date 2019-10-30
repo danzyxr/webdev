@@ -12,11 +12,11 @@ console.log(result);
 
 let yourName;
 
-do {
-    yourName = prompt("Who are you?");
-}
-while (!yourName);
-console.log(yourName);
+// do {
+//     yourName = prompt("Who are you?");
+// }
+// while (!yourName);
+// console.log(yourName);
 
 if (false != true) {
     console.log("That makes sense");
@@ -32,31 +32,31 @@ for (let i = 0; i < 10; i++) {
     console.log(doubled);
 }
 
-let n = 20;
+let x = 20;
 
 while (true) {
-    if (n % 7 == 0) {
-        console.log(n);
+    if (x % 7 == 0) {
+        console.log(x);
         break;
     }
-    n++;
+    x++;
 }
 
-switch (prompt("What's the weather like?")) {
-    case "rainy":
-        console.log("Bring an umbrella.");
-        break;
-    case "sunny":
-        console.log("Dress lightly.");
-    case "cloudy":
-        console.log("Go outside!");
-        break;
-    default:
-        console.log("Idk...");
-        break;
-}
+// switch (prompt("What's the weather like?")) {
+//     case "rainy":
+//         console.log("Bring an umbrella.");
+//         break;
+//     case "sunny":
+//         console.log("Dress lightly.");
+//     case "cloudy":
+//         console.log("Go outside!");
+//         break;
+//     default:
+//         console.log("Idk...");
+//         break;
+// }
 
-// looping a triangle
+// Looping a triangle
 
 let hash = "#";
 
@@ -65,13 +65,13 @@ for (let i = 0; i < 7; i++) {
     hash += '#';
 }
 
-// triangle w/ string.length
+// Triangle w/ string.length
 
 for (let muns = '$'; muns.length <= 7; muns += '$') {
     console.log(muns);
 }
 
-// triangle w/ while loop
+// Triangle w/ while loop
 
 let star = '*'
 
@@ -83,7 +83,7 @@ while (true) {
     star += '*';
 }
 
-// fizzbuzz
+// Fizzbuzz
 
 for (let i = 1; i <= 100; i++) {
     if ((i % 3 == 0) & (i % 5 == 0)) {
@@ -95,12 +95,12 @@ for (let i = 1; i <= 100; i++) {
     }
 }
 
-// chessboard
+// Chessboard
 
 let chess = " # # # #\n# # # # \n # # # #\n# # # # \n # # # #\n# # # # \n # # # #\n# # # # \n";
 console.log(chess);
 
-// chessboard w/ for loop
+// Chessboard w/ for loop
 
 let row_1 = " # # # #";
 let row_2 = "# # # # ";
@@ -113,11 +113,11 @@ for (let i = 1; i <= 8; i++) {
     }
 }
 
-// modify for n x n grid
+// Modify for n x n grid
 // I forgot that I can += a string... ugh
 
+let n = 13
 let big_chess = '';
-let n = prompt("Enter a number: ");
 
 for (let i = 1; i <= n; i++) {
     for (let i = 1; i <= n; i++) {
@@ -139,12 +139,92 @@ console.log(big_chess);
 
 const makeNoise = function () {
     console.log("Pling!");
-}
+};
+
+// Function declaration semicolons
 
 makeNoise();
 
 const power = function (base, exponent) {
     return base ** exponent;
-}
+};
 
 console.log(power(3, 2));
+
+// Functions within functions?
+
+const hummus = function (factor) {
+    const ingredient = function (amount, unit, name) {
+        let ingredientAmount = amount * factor;
+        if (ingredientAmount > 1) {
+            unit += "s";
+        }
+        console.log(`${ingredientAmount} ${unit} ${name}`);
+    };
+    ingredient(1, "can", "chickpeas");
+    ingredient(0.25, "cup", "tahini");
+    ingredient(0.25, "cup", "lemon juice");
+    ingredient(1, "clove", "garlic");
+    ingredient(2, "tablespoon", "olive oil");
+    ingredient(0.5, "teaspoon", "cumin");
+};
+
+hummus(3);
+
+// Finish this function later!
+
+// safeMode = false;
+
+// let launchMissiles = function () {
+//     missileSystem.launch("Launching!");
+// };
+// if (safeMode) {
+//     launchMissiles = function () {
+//         console.log("SAFE MODE");
+//     };
+// }
+
+// launchMissiles()
+
+function cube(x) {
+    return x ** 3;
+}
+
+// No semicolon needed
+
+console.log(cube(2));
+
+// Call before delcaration?
+
+console.log("The future is now!", future());
+
+function future() {
+    return ("But you'll never have flying cars.");
+}
+
+const quadratic = (a, b, c, x) => {
+    let y = a * (x ** 2) + (b * x) + c
+    return y
+};
+
+const sum = (a, b) => a + b;
+
+function chicken() {
+    return egg();
+}
+
+function egg() {
+    return chicken();
+}
+
+// console.log(chicken() + " came first.");
+
+// Optional arguments!!
+
+function minus(a, b) {
+    if (b === undefined) return -a;
+    else return a - b;
+}
+
+console.log(minus(6));
+console.log(minus(9, 3));
