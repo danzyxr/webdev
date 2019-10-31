@@ -1,8 +1,11 @@
 console.log("hello, world");
 console.log("Testing git stuff!");
 
+
 let result = 1;
 let counter = 0;
+
+// Add all digits
 
 while (counter < 10) {
     result = result * 2;
@@ -10,7 +13,7 @@ while (counter < 10) {
 }
 console.log(result);
 
-let yourName;
+// let yourName;
 
 // do {
 //     yourName = prompt("Who are you?");
@@ -18,12 +21,16 @@ let yourName;
 // while (!yourName);
 // console.log(yourName);
 
+// True or false?
+
 if (false != true) {
     console.log("That makes sense");
     if (1 < 2) {
         console.log("No surprise there");
     }
 }
+
+// Double all digits
 
 let doubled = 1;
 
@@ -209,13 +216,13 @@ const quadratic = (a, b, c, x) => {
 
 const sum = (a, b) => a + b;
 
-function chicken() {
-    return egg();
-}
+// function chicken() {
+//     return egg();
+// }
 
-function egg() {
-    return chicken();
-}
+// function egg() {
+//     return chicken();
+// }
 
 // console.log(chicken() + " came first.");
 
@@ -228,3 +235,55 @@ function minus(a, b) {
 
 console.log(minus(6));
 console.log(minus(9, 3));
+
+// C L O S U R E
+
+function wrapValue(n) {
+    let local = n;
+    return () => local;
+}
+
+let wrap1 = wrapValue(36);
+let wrap2 = wrapValue(69);
+console.log(wrap1());
+console.log(wrap2());
+
+// This is really cool
+
+function multiplier(factor) {
+    return number => number * factor;
+}
+
+let thrice = multiplier(3);
+console.log(thrice(9));
+
+// Recursion
+
+function recur_power(base, exponent) {
+    if (exponent == 0) {
+        return 1;
+    } else {
+        return base * power(base, exponent - 1);
+    }
+}
+console.log(recur_power(3, 9));
+
+// This is really, really cool
+
+function findSolultion(target) {
+    function find(current, history) {
+        if (current == target) {
+            return history;
+        } else if (current > target) {
+            return null;
+        } else {
+            return (
+                find(current + 5, `(${history} + 5)`) ||
+                find(current * 3, `(${history} * 3)`)
+            );
+        }
+    }
+    return find(1, "1");
+}
+
+console.log(findSolultion(24));
