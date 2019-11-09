@@ -1,50 +1,44 @@
-:root {
-  --f: firebrick;
+header, footer {
+  color: cornsilk;
+  background-color: black;
+  font-family: monospace;
 }
 
-h1 {
+h1, h2, h3, h4 {
   color: cornsilk;
-  font-family: calibri;
-}
-
-h2 {
-  color: cornsilk;
-  font-family: calibri;
+  background-color: black;
+  font-family: monospace;
 }
 
 body {
   color: aliceblue;
   background-color: rgb(50, 50, 50);
+  font-family: monospace;
 }
 
 .container {
-  display: flex;
-  flex-direction: row; 
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-template-columns: minmax(100px, auto);
 }
 
-.ctrtxt {
-  color: cornsilk;
-  font-family: monospace;
-  text-align: center;
-  padding: .3em
+.a {
+  grid-column: 1;
+  grid-row: 1;
 }
 
-.lovely {
-  color: palevioletred;
+.b {
+  grid-column: 1;
+  grid-row: 2;
 }
 
-.skylark {
-  color: cornflowerblue !important;
+.c {
+  grid-column: 2;
+  grid-row: 1;
 }
 
-.swag {
-  color: gold;
-  font-family: calibri;
-  padding: .3em
-}
-
-.qt {
-  color: pink;
-  font-family: calibri;
-  padding: .3em
+.d {
+  grid-column: 2;
+  grid-row: 2;
 }
