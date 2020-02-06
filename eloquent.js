@@ -1,7 +1,6 @@
 console.log("hello, world");
 console.log("Testing git stuff!");
 
-
 let result = 1;
 let counter = 0;
 
@@ -11,6 +10,7 @@ while (counter < 10) {
     result = result * 2;
     counter = counter + 1;
 }
+
 console.log(result);
 
 // let yourName;
@@ -105,6 +105,7 @@ for (let i = 1; i <= 100; i++) {
 // Chessboard
 
 let chess = " # # # #\n# # # # \n # # # #\n# # # # \n # # # #\n# # # # \n # # # #\n# # # # \n";
+
 console.log(chess);
 
 // Chessboard w/ for loop
@@ -266,11 +267,12 @@ function recur_power(base, exponent) {
         return base * power(base, exponent - 1);
     }
 }
+
 console.log(recur_power(3, 9));
 
 // This is really, really cool
 
-function findSolultion(target) {
+function findSolution(target) {
     function find(current, history) {
         if (current == target) {
             return history;
@@ -286,4 +288,4 @@ function findSolultion(target) {
     return find(1, "1");
 }
 
-console.log(findSolultion(24));
+console.log(findSolution(36));

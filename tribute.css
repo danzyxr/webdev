@@ -1,0 +1,37 @@
+/*
+front-size = rem
+padding/margin = em
+widths = em or %
+*/
+
+body {
+    margin: 0 auto;
+    max-width: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: 1.5;
+}
+
+h2 {
+    margin-top: 1em;
+    padding-top: 1em;
+}
+
+#main {
+    margin: 30px 15px;
+    padding: 5px 15px;
+    background: rgb(195, 215, 255);
+}
+
+#img-div {
+    margin: 0 auto;
+    padding: 15px 10px;
+    max-width: 1080px;
+    background: rgb(20, 85, 150);
+    color: azure;
+}
+
+#image {
+    max-width: 100%;
+    display: block;
+}
