@@ -1,0 +1,64 @@
+/*
+front-size = rem
+padding/margin = em
+widths = em or %
+*/
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 705px) {
+  * {
+    font-size: 0.85rem;
+  }
+}
+
+body {
+  margin: auto;
+  max-width: 80%;
+  text-align: center;
+  line-height: 1.5;
+}
+
+#main {
+  margin: 1em;
+  padding: 0.5em 1em;
+  border-radius: 0.75em;
+  background: rgb(195, 215, 255);
+}
+
+#img-div {
+  margin: auto;
+  padding: 0.75em;
+  max-width: 100%;
+  border-radius: 0.75em;
+  background: rgb(20, 85, 150);
+  color: azure;
+}
+
+#image {
+  max-width: 100%;
+  border-radius: 0.75em;
+  display: block;
+}
+
+#img-caption {
+  padding-top: 0.5em;
+}
+
+.card {
+  margin: 0.5em auto;
+  border: solid azure 0.1em;
+  border-radius: 0.75em;
+  background: black;
+  max-width: 90%;
+}
+
+.cards {
+  padding: 0.1em;
+  margin-bottom: 0.5em;
+  border-radius: 0.75em;
+  background: rgb(20, 85, 150);
+  color: azure;
+}

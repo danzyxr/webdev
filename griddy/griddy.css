@@ -1,0 +1,46 @@
+/*
+front-size = rem
+padding/margin = em
+widths = em or %
+*/
+
+main {
+  display: grid;
+  grid-template-areas:
+    "header   header    header"
+    "aside    article   nav"
+    "footer   footer    footer";
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 10em auto 10em;
+  gap: 1em 3em;
+  padding: 1em;
+}
+
+header {
+  grid-area: header;
+  background: salmon;
+}
+
+aside {
+  grid-area: aside;
+  background: lemonchiffon;
+}
+
+article {
+  grid-area: article;
+  background: darkseagreen;
+}
+
+nav {
+  grid-area: nav;
+  background: cornflowerblue;
+}
+
+footer {
+  grid-area: footer;
+  background: darkorchid;
+}
+
+.container {
+  background: lavender;
+}

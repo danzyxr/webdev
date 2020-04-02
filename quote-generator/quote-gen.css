@@ -1,0 +1,55 @@
+/*
+front-size = rem
+padding/margin = em
+widths = em or %
+*/
+
+* {
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+}
+
+@media (max-width: 500px) {
+  * {
+    font-weight: 500;
+    font-size: 0.85rem;
+  }
+}
+
+body {
+  margin: 0 auto;
+  min-width: 320px;
+  min-height: 100vh;
+  background: radial-gradient(azure, aliceblue, snow);
+  background-size: auto 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 80%;
+  background-image: url(img/diag.png);
+  border: 0.5em solid oldlace;
+  text-align: center;
+  padding: 2.5em;
+}
+
+#quote-button {
+  outline: none;
+  background-image: linear-gradient(45deg, oldlace, snow);
+  border: 0.5em solid oldlace;
+  padding: 1em 1.5em;
+}
+
+#quote-button:hover {
+  background-image: linear-gradient(-45deg, oldlace, snow);
+  border: 0.5em solid snow;
+}
+
+blockquote {
+  margin: 1em 2.5em;
+  background: snow;
+  border-left: 0.5em solid oldlace;
+  padding: 1em;
+}

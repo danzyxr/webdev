@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="survey.css" />
+    <title>Tutoring Survey</title>
+  </head>
+
+  <body>
+    <main>
+      <h1 id="title">Tutoring Survey</h1>
+      <p id="description">This survey will help us better serve you ♥</p>
+      <form id="survey-form">
+        <label id="name-label" for="name">Your name</label>
+        <input id="name" type="text" name="user_name" placeholder="or pseudonym" required />
+
+        <label id="number-label" for="number">Your age (optional)</label>
+        <input
+          id="number"
+          type="number"
+          name="user_age"
+          placeholder="13 < age < 99"
+          min="13"
+          max="99"
+        />
+
+        <label id="email-label" for="email">Your e-mail</label>
+        <input id="email" type="email" name="user_email" placeholder="your@email.com" required />
+
+        <label id="tel-label" for="tel">Your phone (optional)</label>
+        <input id="tel" type="tel" name="user_tel" placeholder="555-555-5555" />
+
+        <div class="contact">
+          <label>Primary contact preference:</label>
+          <div class="contact-buttons">
+            <input id="radio-email" type="radio" name="preference" value="email" />
+            <label for="radio-email">e-mail</label>
+          </div>
+          <div class="contact-buttons">
+            <input id="radio-phone" type="radio" name="preference" value="phone" />
+            <label for="radio-phone">phone</label>
+          </div>
+        </div>
+
+        <label id="dropdown">Your motivation to seek help</label>
+        <select id="dropdown" required>
+          <option disabled selected value>Select an option</option>
+          <option value="curious">I am a curious life-long learner!</option>
+          <option value="highschool-ged">I am pursuing a HS diploma or GED</option>
+          <option value="certificate">I am pursuing a vocational certificate</option>
+          <option value="college">I am pursuing a two/four-year degree</option>
+          <option value="null">None of these options apply to me</option>
+        </select>
+      </form>
+    </main>
+    <script src="survey.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
