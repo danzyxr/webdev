@@ -1,0 +1,81 @@
+/*
+front-size = rem
+padding/margin = em
+widths = em or %
+*/
+
+* {
+  font-size: 1rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+@media (max-width: 640px) {
+  * {
+    font-size: 0.85rem;
+  }
+}
+
+input:valid {
+  padding: 1em;
+  border: 0.2em solid #20b2aa;
+  border-radius: 0.5em;
+}
+
+input:invalid {
+  padding: 1em;
+  border: 0.2em dotted #f08080;
+  border-radius: 0.5em;
+}
+
+input:invalid:required {
+  background-image: linear-gradient(-90deg, white, rgb(255, 235, 235));
+}
+
+body {
+  margin: auto;
+  max-width: 80%;
+}
+
+html,
+body {
+  width: 100%;
+  min-width: 320px;
+}
+
+#title,
+#description {
+  text-align: center;
+}
+
+#survey-form {
+  display: flex;
+  flex-direction: column;
+  padding: 0em 1em 1.5em;
+  border: 0.2em solid #20b2aa;
+  border-radius: 0.5em;
+}
+
+select {
+  padding: 1em;
+  border: 0.2em solid #20b2aa;
+  border-radius: 0.5em;
+}
+
+label {
+  padding: 1em 0 0.5em 0;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1em;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.contact label {
+  padding-top: 0;
+}

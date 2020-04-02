@@ -1,0 +1,45 @@
+/*
+front-size = rem
+padding/margin = em
+widths = em or %
+*/
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: auto;
+  background-image: url(./img/starburst.jpg);
+  border: 0.75em solid black;
+}
+
+.row {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  background: red;
+}
+
+.row-item {
+  width: 5em;
+  height: 5em;
+  border: 0.75em solid pink;
+  background: aliceblue;
+}
+
+.col {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  background: blue;
+}
+
+.col-item {
+  width: 100%;
+  min-height: 100px;
+  max-height: 300px;
+  border: 0.75em solid skyblue;
+  background: aliceblue;
+}
