@@ -1,0 +1,35 @@
+/*
+front-size = rem
+padding/margin = em
+widths = em or %
+*/
+
+body {
+  color: pink;
+  background-color: slategray;
+}
+
+.card {  
+  color: white;
+  background-color: black;
+  border-radius: 3px;
+  font-size: 3rem;
+  
+  overflow: hidden;
+  transition: all 500ms;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+}
+
+.card:hover {
+  transform: translateY(-3px) scale(1.1);
+}

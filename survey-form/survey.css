@@ -5,14 +5,39 @@ widths = em or %
 */
 
 * {
-  font-size: 1rem;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 550px) {
   * {
     font-size: 0.85rem;
   }
+}
+
+body {
+  margin: auto;
+  min-width: 320px;
+  max-width: 100%;
+  padding-bottom: 1.5em;
+}
+
+#title,
+#description {
+  text-align: center;
+}
+
+#survey-form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  border: 0.2em solid #20b2aa;
+  border-radius: 0.5em;
+  padding: 0em 1em 0em 1em;
+  width: 80%;
+}
+
+label {
+  padding: 1em 0 0.5em 0;
 }
 
 input:valid {
@@ -31,51 +56,43 @@ input:invalid:required {
   background-image: linear-gradient(-90deg, white, rgb(255, 235, 235));
 }
 
-body {
-  margin: auto;
-  max-width: 80%;
-}
-
-html,
-body {
-  width: 100%;
-  min-width: 320px;
-}
-
-#title,
-#description {
-  text-align: center;
-}
-
-#survey-form {
-  display: flex;
-  flex-direction: column;
-  padding: 0em 1em 1.5em;
-  border: 0.2em solid #20b2aa;
-  border-radius: 0.5em;
-}
-
-select {
+select:valid {
   padding: 1em;
   border: 0.2em solid #20b2aa;
   border-radius: 0.5em;
 }
 
-label {
-  padding: 1em 0 0.5em 0;
+select:invalid {
+  padding: 1em;
+  border: 0.2em dotted #f08080;
+  border-radius: 0.5em;
 }
 
-.contact {
+select:invalid:required {
+  background-image: linear-gradient(-90deg, white, rgb(255, 235, 235));
+}
+
+textarea {
+  resize: none;
+}
+
+#contact {
   display: flex;
   flex-direction: row;
   padding-top: 1em;
 }
 
-.contact-buttons {
+.contact-button {
   display: flex;
   flex-direction: row;
 }
 
-.contact label {
+#contact label {
   padding-top: 0;
+}
+
+#submit {
+  width: 10em;
+  margin: 1em auto;
+  padding: 1em;
 }

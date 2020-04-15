@@ -6,19 +6,27 @@ widths = em or %
 
 * {
   margin: 0;
-  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .container {
-  height: auto;
+  width: 100%;
+  height: min-content;
   background-image: url(./img/starburst.jpg);
   border: 0.75em solid black;
 }
 
 .row {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
   background: red;
 }
 
@@ -30,14 +38,13 @@ widths = em or %
 }
 
 .col {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   background: blue;
 }
 
 .col-item {
-  width: 100%;
   min-height: 100px;
   max-height: 300px;
   border: 0.75em solid skyblue;

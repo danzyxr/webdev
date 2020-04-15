@@ -1,19 +1,3 @@
-/*
-
-const n1 = {
-  data: 100
-};
-
-const n2 = {
-  data: 200
-};
-
-n1.next = n2;
-
-console.log(n1);
-
-*/
-
 class Node {
   constructor(data, next = null) {
     this.data = data;
@@ -115,17 +99,17 @@ class LinkedList {
     this.size--;
   }
 
-  clearLL() {
-    this.head = null;
-    this.size = 0;
-  }
-
   printLLData() {
     let current = this.head;
     while (current) {
       console.log(current.data);
       current = current.next;
     }
+  }
+  
+  clearLL() {
+    this.head = null;
+    this.size = 0;
   }
 }
 

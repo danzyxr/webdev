@@ -153,7 +153,7 @@ console.log(big_chess);
 
 // FUNCTIONS!!
 
-const makeNoise = function() {
+const makeNoise = function () {
   console.log("Pling!");
 };
 
@@ -161,7 +161,7 @@ makeNoise();
 
 // Base to power of
 
-const power = function(base, exponent) {
+const power = function (base, exponent) {
   return base ** exponent;
 };
 
@@ -169,8 +169,8 @@ console.log(power(3, 2));
 
 // Functions within functions?
 
-const hummus = function(factor) {
-  const ingredient = function(amount, unit, name) {
+const hummus = function (factor) {
+  const ingredient = function (amount, unit, name) {
     let ingredientAmount = amount * factor;
     if (ingredientAmount > 1) {
       unit += "s";
@@ -227,7 +227,7 @@ console.log(wrap2());
 // This is really cool
 
 function multiplier(factor) {
-  return number => number * factor;
+  return (number) => number * factor;
 }
 
 let thrice = multiplier(3);
@@ -328,13 +328,13 @@ function f(a, b) {
 
 // Define g to hold a function value
 
-const g = function(x) {
+const g = function (x) {
   return Math.E ** x;
 };
 
 // Let h to be an arrow function
 
-let h = a => a % 2;
+let h = (a) => a % 2;
 
 // Returns minimum number
 // With some spread syntax?!
@@ -642,12 +642,12 @@ function arrayToLList(arr) {
   let d = "data";
   let n = "next";
 
-  let lList = nextNode();
+  let LList = nextNode();
 
   for (let i = 0; i < arr.length; i++) {
-    lList[d] = arr[i];
+    LList[d] = arr[i];
     d = "next." + d;
-    lList[n] = nextNode();
+    LList[n] = nextNode();
     n = "next." + n;
   }
 
@@ -658,25 +658,26 @@ function arrayToLList(arr) {
     };
   }
 
-  return lList;
+  return LList;
 }
 
 console.log(arrayToLList(["1st", "2nd", "3rd", "4th"]));
 */
 
 function arrToLList(arr) {
-  let lList = null;
+  let LList = null;
   for (let i = arr.length - 1; i >= 0; i--) {
-    lList = { data: arr[i], next: lList };
+    LList = { data: arr[i], next: LList };
   }
-  return lList;
+  return LList;
 }
 
 myLL = arrToLList(["asdf", "qwerty", "lol", "xD"]);
 
 console.log(JSON.stringify(myLL));
 
-function printValues(obj) {
+/*
+function printValuesNested(obj) {
   for (let key in obj) {
     if (typeof obj[key] === "object") {
       printValues(obj[key]);
@@ -686,12 +687,54 @@ function printValues(obj) {
   }
 }
 
-// console.log(printValues(myLL));
+printValuesNested(myLL);
+*/
 
-function LListToArr(LL) {
-  for (let node in LL) {
-    console.log(LL[node]["next"]);
+function LListToArr(LList) {
+  let arr = [];
+  for (let node = LList; node; node = node.next) {
+    console.log(`node: ${node}`);
+    console.log(`node.data: ${node.data}`);
+    console.log(`node.next: ${node.next}`);
+    arr.push(node.data);
   }
+  return arr;
 }
 
-LListToArr(myLL);
+console.log(LListToArr(myLL));
+
+function prepend(data, LList) {
+  return { data: data, next: LList };
+}
+
+myLL = prepend("Grape-Flavored Candy", myLL);
+
+console.log(myLL);
+
+function nth(LList, n) {
+  if (!LList) return undefined;
+  else if (n === 0) return LList.data;
+  else return nth(LList.next, n - 1);
+}
+
+console.log(nth(myLL, 3));
+
+function deepCompare(a, b) {
+  if (a === b) return true;
+
+  if (a === null || typeof a !== "object") return false;
+  if (b === null || typeof b !== "object") return false;
+
+  let keysA = Object.keys(a);
+  let keysB = Object.keys(b);
+
+  if (keysA.length !== keysB.length) return false;
+
+  for (let k of keysA) {
+    if (!keysB.includes(k) || !deepCompare(a[k], b[k])) return false;
+  }
+
+  return true;
+}
+
+console.log(deepCompare({ a: { b: { c: "123" } } }, { a: { b: { c: "123" } } }));
