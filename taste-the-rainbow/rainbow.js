@@ -1,4 +1,4 @@
-const hexSpan = document.querySelector("#hex\\-span");
+const hexSpan = document.querySelector("#hex-span");
 const colorButton = document.querySelector(".colorButton");
 const bodyBackground = document.querySelector("body");
 
