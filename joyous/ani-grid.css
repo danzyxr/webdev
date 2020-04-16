@@ -4,15 +4,15 @@ padding/margin = em
 widths = em or %
 */
 
-.body {
-  width: 80%;
-  min-width: 1080px;
+body {
+  width: 500px;
+  min-width: 500px;
   margin: auto;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 240px auto auto 240px;
+  grid-template-columns: 100px auto auto 100px;
   grid-template-rows: repeat(4, 25%);
   gap: 1rem;
   grid-template-areas:

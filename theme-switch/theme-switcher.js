@@ -1,4 +1,4 @@
-// DOM Elements
+// DOM elements
 
 const darkButton = document.getElementById("dark");
 const lightButton = document.getElementById("light");
@@ -15,7 +15,7 @@ if (theme) {
   isSolar && body.classList.add("solar");
 }
 
-// Button Event Handlers
+// Button event handlers
 
 darkButton.onclick = () => {
   body.classList.replace("light", "dark");
