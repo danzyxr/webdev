@@ -29,7 +29,7 @@ body {
 
 .container {
   width: 80%;
-  background-image: url(img/diag.png);
+  background-image: url("./img/diag.png");
   border: 0.5em solid oldlace;
   text-align: center;
   padding: 2.5em;
