@@ -1,0 +1,102 @@
+/*
+front-size = rem
+padding/margin = em
+widths = em or %
+*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Raleway;
+}
+
+body {
+  font-size: 1rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+div.tab {
+  display: none;
+  flex-direction: column;
+}
+
+#register-form {
+  width: 50em;
+  margin: 3em auto;
+  border: solid 1em #ffaaff;
+  border-radius: 10px;
+  padding: 1em 3em;
+  color: #eeeeee;
+  background-color: #333333;
+}
+
+label {
+  font-size: 1.25rem;
+  margin-bottom: 0.5em;
+}
+
+input {
+  width: 100%;
+  margin: 3px 0 3px 0;
+  margin-top: 0.5em;
+  border: 1px solid #f0f0f0;
+  padding: 1em;
+  font-size: 1.15rem;
+}
+
+input.invalid {
+  background-color: #ff7272;
+}
+
+#nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: fit-content;
+  margin-top: 0.65em;
+}
+
+button {
+  border: none;
+  margin-left: 0.5em;
+  padding: 1em 2em;
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #333;
+  background-color: #ffaaff;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.75;
+}
+
+#step-container {
+  display: flex;
+  padding: 0.25em 0;
+}
+
+span.step {
+  width: 2em;
+  height: 2em;
+  display: inline-block;
+  margin-left: 0.5em;
+  border: none;
+  border-radius: 50%;
+  background-color: #44ffdd;
+  opacity: 50%;
+}
+
+span.step.active {
+  opacity: 1;
+}
+
+span.step.complete {
+  background-color: #69ff55;
+}

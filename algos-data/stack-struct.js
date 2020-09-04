@@ -63,6 +63,8 @@ let Stack = function () {
   };
 };
 
+// Using the stack
+
 let myStack = new Stack();
 
 console.log(myStack.isEmpty());

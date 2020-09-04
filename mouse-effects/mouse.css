@@ -1,3 +1,9 @@
+/*
+front-size = rem
+padding/margin = em
+widths = em or %
+*/
+
 body {
   background: black;
 }
