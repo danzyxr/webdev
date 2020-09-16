@@ -76,6 +76,7 @@ let under_18 = [];
 for (const age of ages) {
   if (age < 18) under_18.push(age);
 }
+
 console.log(`\nAges under 18: ${under_18}`);
 
 // Filter drinking/smoking ages w/ filter()
@@ -85,6 +86,7 @@ const canDrink = ages.filter(function (age) {
     return true;
   }
 });
+
 console.log(`\nThese ages can drink: ${canDrink}`);
 
 const canSmoke = ages.filter((age) => age >= 18); // ES6
@@ -97,6 +99,7 @@ const retailCompanies = companies.filter(function (co) {
     return true;
   }
 });
+
 console.log("\nFiltered by retail:\n", retailCompanies);
 
 const financeCompanies = companies.filter((co) => co.category === "Finance");
@@ -115,6 +118,7 @@ console.log("\nLasted >= 10 years:\n", lastedTenYears);
 const companyDates = companies.map(function (co) {
   return `${co.name}: ${co.start} - ${co.end}`;
 });
+
 console.log("\nMapped by dates:\n", companyDates);
 
 const companyTypes = companies.map((co) => `${co.name}: ${co.category}`);
@@ -137,6 +141,7 @@ const sortCompanies = companies.sort(function (co_1, co_2) {
   if (co_1.start > co_2.start) return 1;
   else return -1;
 });
+
 console.log("\nSorted by start date:\n", sortCompanies);
 
 // R E D U C E ?!
@@ -147,6 +152,7 @@ let agesSum = 0;
 ages.forEach((age) => {
   agesSum += age;
 });
+
 console.log(`\nSum of ages: ${agesSum}`);
 
 // Sum array elements w/ reduce()
@@ -154,6 +160,7 @@ console.log(`\nSum of ages: ${agesSum}`);
 const agesTotal = ages.reduce(function (total, age) {
   return total + age;
 }, 0);
+
 console.log(`\nNow w/ reduce(): ${agesTotal}`);
 
 const agesES6 = ages.reduce((total, age) => total + age, 0);
@@ -162,6 +169,7 @@ console.log(`\nNow w/ ES6: ${agesES6}`);
 const totalYears = companies.reduce(function (total, co) {
   return total + (co.end - co.start);
 }, 0);
+
 console.log(`\nTotal company years: ${totalYears}`);
 
 const totalYearsES6 = companies.reduce((total, co) => total + (co.end - co.start), 0);
@@ -174,4 +182,5 @@ const combined = ages
   .filter((age) => age >= 18)
   .map((age) => age + 50)
   .reduce((total, age) => total + age, 0);
+
 console.log(`\nPutting it all together: ${combined}`);
