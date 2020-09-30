@@ -238,77 +238,6 @@ console.log(doh.toUpperCase());
 console.log(typeof doh.toUpperCase()); // string
 console.log(typeof doh.toUpperCase); // function
 
-// Playing with multiple objects & stuffs
-// I always wanted to create a RPG system!
-
-let Warrior = {
-  level: 1,
-  profession: "Warrior",
-  base_stats: [45, 40, 15],
-  base_skills: ["Omnislash", "Berserker's Rage", "War Cry"],
-  stat_gain: [4.5, 4.0, 1.5],
-  name: ""
-};
-
-let Assassin = {
-  level: 1,
-  profession: "Assassin",
-  base_stats: [20, 55, 25],
-  base_skills: ["Longshot", "Venomous Bite", "Double Daggers"],
-  stat_gain: [2.0, 5.5, 2.5],
-  name: ""
-};
-
-let Paladin = {
-  level: 1,
-  profession: "Paladin",
-  base_stats: [60, 20, 20],
-  base_skills: ["Wrath of God", "Divine Shield", "Shining Light"],
-  stat_gain: [6.0, 2.0, 2.0],
-  name: ""
-};
-
-let Warlock = {
-  level: 1,
-  profession: "Warlock",
-  base_stats: [15, 20, 65],
-  base_skills: ["Incinerate", "Summon Elemental", "Coldsnap"],
-  stat_gain: [1.5, 2.0, 6.5],
-  name: ""
-};
-
-console.log(Object.keys(Warlock));
-
-function createCharacter(prof, name) {
-  let newCharacter = {};
-  Object.assign(newCharacter, prof);
-  newCharacter.name = name;
-  return newCharacter;
-}
-
-function skillUpChar(character) {
-  let skill = "placeholder skill";
-  console.log(`${character.name} has learned ${skill}!`);
-}
-
-function levelUpChar(character, levels) {
-  for (let i = 0; i < levels; i++) {
-    character.level += 1;
-    if (character.level % 5 === 0) {
-      skillUpChar(character);
-    }
-  }
-  for (let i = 0; i < character.base_stats.length; i++) {
-    character.base_stats[i] += character.stat_gain[i] * levels;
-  }
-}
-
-let melkor = createCharacter(Warlock, "Archmage Melkor");
-
-console.log(melkor);
-levelUpChar(melkor, 13);
-console.log(melkor);
-
 // A for loop for arrays
 
 let myArray = [1, 2, 3, 4, 5, 6];
@@ -316,62 +245,6 @@ let myArray = [1, 2, 3, 4, 5, 6];
 for (let num of myArray) {
   console.log(num);
 }
-
-// A todo stack
-
-let todoList = [];
-
-function remember(task) {
-  todoList.push(task);
-}
-
-function getTask() {
-  return todoList.shift();
-}
-
-function rememberUrgently(task) {
-  todoList.unshift(task);
-}
-
-// Array slicing and other things
-
-console.log([1, 2, 3, 2, 1].indexOf(2, 1));
-console.log([1, 2, 3, 2, 1].lastIndexOf(2, 3));
-
-console.log([0, 1, 2, 3, 4].slice(2, 4));
-console.log([0, 1, 2, 3, 4].slice(2));
-
-function remove(arr, idx) {
-  return arr.slice(0, idx).concat(arr.slice(idx + 1));
-}
-
-console.log(remove(["a", "b", "c", "d", "e", "f", "g"], 2));
-
-console.log("Alice".indexOf("c"));
-console.log("one two three".indexOf("ee"));
-console.log("Coconuts".slice(4, 7));
-console.log("Coconuts".slice(4));
-console.log(" \n \n \n Ok \n \n \n ".trim());
-console.log(String(7).padStart(3, "0"));
-
-let sentence = "Secretarybirds specialize in stomping";
-let words = sentence.split(" ");
-console.log(words);
-console.log(words.join(" "));
-console.log("la".repeat(3));
-
-function max(...numbers) {
-  let result = -Infinity;
-  for (let n of numbers) {
-    if (n > result) result = n;
-  }
-  return result;
-}
-
-console.log(max(1, 3, 9, 27));
-
-let asdf = ["will", "never", "fully"];
-console.log("I", ...asdf, "understand.");
 
 // A li'l bit o' maths
 
@@ -606,10 +479,37 @@ function loop(n, action) {
   }
 }
 
+// Higher-order functions!
+
 let labels = [];
 loop(5, (i) => {
   labels.push(`Unit ${i + 1}`);
 });
 console.log(labels);
 
-// tbc...
+// Functions that create new functions?!?!
+
+function greaterThan(n) {
+  return (m) => m > n;
+}
+let greaterThan10 = greaterThan(10);
+console.log(greaterThan10(11));
+
+// Functions can alter other functions... BRUH
+
+function noisy(f) {
+  return (...args) => {
+    console.log("Calling with", args);
+    let result = f(...args);
+    console.log(`Called with ${args} returned ${result}`);
+    return result;
+  };
+}
+
+noisy(Math.min)(3, 2, 1);
+
+// FUNCTIONS CAN ALTER CONTROL FLOWWW AHHH
+
+function unless(test, then) {
+  if (!test) then();
+}
