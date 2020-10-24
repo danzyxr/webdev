@@ -144,7 +144,7 @@ function printFarmInventory_v2(cows, chickens, pigs) {
 
 printFarmInventory_v2(2, 4, 6);
 
-// An even better way?!
+// An even better way?
 
 function zeroPad(number, width) {
   let string = String(number);
@@ -163,7 +163,7 @@ function printFarmInventory_v3(cows, chickens, pigs) {
 printFarmInventory_v3(3, 6, 9);
 
 // Delcare f to be a function
-// This is (almost) phi... lol
+// This is (almost) phi
 
 function f(a, b) {
   if (a > b && a > 0) {
@@ -246,7 +246,7 @@ for (let num of myArray) {
   console.log(num);
 }
 
-// A li'l bit o' maths
+// A little bit of maths
 
 console.log(Math.floor(Math.random() * 10));
 console.log(Math.floor(Math.random() * 10));
@@ -274,8 +274,6 @@ let { myAge } = me;
 
 console.log(myName);
 console.log(myAge);
-
-// & JSON ;)
 
 let jsonString = JSON.stringify({
   squirrel: false,
@@ -459,8 +457,6 @@ function deepCompare(a, b) {
 
 console.log(deepCompare({ a: { b: { c: "123" } } }, { a: { b: { c: "123" } } }));
 
-// Higher-Order Functions ~~~
-
 // Consider:
 
 let count = 1;
@@ -479,7 +475,7 @@ function loop(n, action) {
   }
 }
 
-// Higher-order functions!
+// Higher-order functions
 
 let labels = [];
 loop(5, (i) => {
@@ -487,7 +483,7 @@ loop(5, (i) => {
 });
 console.log(labels);
 
-// Functions that create new functions?!?!
+// Functions that create new functions?!
 
 function greaterThan(n) {
   return (m) => m > n;
@@ -495,7 +491,7 @@ function greaterThan(n) {
 let greaterThan10 = greaterThan(10);
 console.log(greaterThan10(11));
 
-// Functions can alter other functions... BRUH
+// Functions can alter other functions
 
 function noisy(f) {
   return (...args) => {
@@ -508,7 +504,7 @@ function noisy(f) {
 
 noisy(Math.min)(3, 2, 1);
 
-// FUNCTIONS CAN ALTER CONTROL FLOWWW AHHH
+// Functions can alter control flow
 
 function unless(test, then) {
   if (!test) then();
