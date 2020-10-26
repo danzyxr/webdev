@@ -1,20 +1,14 @@
-/*
-front-size = rem
-padding/margin = em
-widths = em or %
-*/
-
 body {
   color: pink;
   background-color: slategray;
 }
 
-.card {  
+.card {
   color: white;
   background-color: black;
   border-radius: 3px;
   font-size: 3rem;
-  
+
   overflow: hidden;
   transition: all 500ms;
   background-size: cover;
