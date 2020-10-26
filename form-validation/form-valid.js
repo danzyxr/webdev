@@ -3,7 +3,7 @@ const password = document.getElementById("password");
 const form = document.getElementById("form");
 const errorElement = document.getElementById("error");
 
-form.addEventListener("submit", (asdf) => {
+form.addEventListener("submit", (e) => {
   let messages = [];
 
   if (name.value === "" || name.value === null) {
@@ -23,7 +23,7 @@ form.addEventListener("submit", (asdf) => {
   }
 
   if (messages.length > 0) {
-    asdf.preventDefault();
+    e.preventDefault();
     errorElement.innerText = messages.join("\n");
   }
 });

@@ -1,6 +1,3 @@
-// Playing with multiple objects & stuffs
-// I always wanted to create a RPG system!
-
 let Warrior = {
   level: 1,
   profession: "Warrior",
@@ -10,9 +7,9 @@ let Warrior = {
   name: ""
 };
 
-let Assassin = {
+let Rogue = {
   level: 1,
-  profession: "Assassin",
+  profession: "Rogue",
   base_stats: [20, 55, 25],
   base_skills: ["Longshot", "Venomous Bite", "Double Daggers"],
   stat_gain: [2.0, 5.5, 2.5],
