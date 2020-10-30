@@ -1,5 +1,4 @@
 // prettier-ignore
-
 let i = 1, j = 1, k = 1;
 
 function fn(a, b, c) {
