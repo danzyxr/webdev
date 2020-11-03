@@ -71,7 +71,7 @@ companies.forEach(function (i) {
 
 let under_18 = [];
 
-// Fill an array with minors w/ for...of
+// Find all ages under 18 w/ for...of
 
 for (const age of ages) {
   if (age < 18) under_18.push(age);
