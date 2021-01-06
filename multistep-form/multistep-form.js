@@ -22,14 +22,14 @@ function tabState(n) {
     nextBtn.innerHTML = "Next";
   }
 
-  const setActiveStep = function (x) {
+  const setActiveStep = function (step) {
     steps = document.querySelectorAll(".step");
 
     for (let i = 0; i < steps.length; i++) {
       steps[i].className = steps[i].className.replace(" active", "");
     }
 
-    steps[x].className += " active";
+    steps[step].className += " active";
   };
 
   setActiveStep(n);
