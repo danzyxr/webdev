@@ -1,4 +1,4 @@
-// FUNCTIONS!!
+// Functions
 
 const makeNoise = function () {
   console.log("Pling!");
@@ -14,7 +14,7 @@ const power = function (base, exponent) {
 
 console.log(power(3, 2));
 
-// Functions within functions?
+// Functions within functions
 
 const hummus = function (factor) {
   const ingredient = function (amount, unit, name) {
@@ -34,7 +34,7 @@ const hummus = function (factor) {
 
 hummus(3);
 
-// Call before delcaration?
+// Call before delcaration
 
 console.log("The future is now!", future());
 
@@ -49,7 +49,7 @@ const quadratic = (a, b, c, x) => {
 
 const add = (a, b) => a + b;
 
-// Optional arguments!!
+// Optional arguments
 
 function minus(a, b) {
   if (b === undefined) return -a;
@@ -126,7 +126,7 @@ function printFarmInventory_v1(cows, chickens) {
 
 printFarmInventory_v1(7, 11);
 
-// A better way?!
+// A better way
 
 function printZeroPaddedWithLabel(number, label) {
   let numberString = String(number);
@@ -144,7 +144,7 @@ function printFarmInventory_v2(cows, chickens, pigs) {
 
 printFarmInventory_v2(2, 4, 6);
 
-// An even better way?
+// An even better way
 
 function zeroPad(number, width) {
   let string = String(number);
@@ -184,7 +184,7 @@ const g = function (x) {
 let h = (a) => a % 2;
 
 // Returns minimum number
-// With some spread syntax?!
+// With some spread syntax
 
 function minOf(a, b) {
   const nums = [a, b];
@@ -229,7 +229,7 @@ function countChar(str, char) {
   return counter;
 }
 
-console.log(countChar("Cogito ergo sum!", "o"));
+console.log(countChar("Cogito ergo sum", "o"));
 
 // Data structures, objects, and etc.
 
@@ -246,7 +246,7 @@ for (let num of myArray) {
   console.log(num);
 }
 
-// A little bit of maths
+// Random & maths
 
 console.log(Math.floor(Math.random() * 10));
 console.log(Math.floor(Math.random() * 10));
@@ -456,63 +456,3 @@ function deepCompare(a, b) {
 }
 
 console.log(deepCompare({ a: { b: { c: "123" } } }, { a: { b: { c: "123" } } }));
-
-// Consider:
-
-let count = 1;
-let total = 0;
-
-while (count <= 10) {
-  total += count;
-  count += 1;
-}
-
-console.log(total);
-
-function loop(n, action) {
-  for (let i = 0; i < n; i++) {
-    action(i);
-  }
-}
-
-// Higher-order functions
-
-let labels = [];
-loop(5, (i) => {
-  labels.push(`Unit ${i + 1}`);
-});
-console.log(labels);
-
-// Functions that create new functions?!
-
-function greaterThan(n) {
-  return (m) => m > n;
-}
-
-let greaterThan10 = greaterThan(10);
-console.log(greaterThan10(11));
-
-// Functions can alter other functions
-
-function noisy(f) {
-  return (...args) => {
-    console.log("Calling with", args);
-    let result = f(...args);
-    console.log(`Called with ${args} returned ${result}`);
-    return result;
-  };
-}
-
-noisy(Math.min)(3, 2, 1);
-
-// Functions can alter control flow
-
-function unless(test, then) {
-  if (!test) then();
-}
-
-repeat(3, (n) => {
-  unless(n % 2 == 1, () => {
-    console.log(n, "is even");
-  });
-});

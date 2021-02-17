@@ -1,6 +1,7 @@
 // A todo stack
 
 let todoStack = [];
+
 function remember(task) {
   todoStack.push(task);
 }
@@ -10,3 +11,12 @@ function getTask() {
 function rememberUrgently(task) {
   todoStack.unshift(task);
 }
+
+remember("clean room");
+remember("read chapter five");
+remember("complete taxes");
+rememberUrgently("oil change");
+
+console.log(todoStack);
+console.log(getTask());
+console.log(todoStack);

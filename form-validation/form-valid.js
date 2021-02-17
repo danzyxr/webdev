@@ -1,4 +1,4 @@
-const name = document.getElementById("name");
+const username = document.getElementById("username");
 const password = document.getElementById("password");
 const form = document.getElementById("form");
 const errorElement = document.getElementById("error");
@@ -6,7 +6,7 @@ const errorElement = document.getElementById("error");
 form.addEventListener("submit", (e) => {
   let messages = [];
 
-  if (name.value === "" || name.value === null) {
+  if (username.value === "" || username.value === null) {
     messages.push("Please enter a valid name.");
   }
 

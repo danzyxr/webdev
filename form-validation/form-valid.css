@@ -3,12 +3,19 @@ form {
 }
 
 .form-div {
-  margin: 2em 0;
-  padding: 1.5em;
-  background: green;
   display: grid;
+  background: #333;
+  color: #eee;
+
+  margin: 0.5em 0;
+  padding: 0.5em;
 }
 
-.form-div input {
-  margin-top: 1.5em;
+.form-div > input {
+  margin: 0.5em 0;
+  padding: 0.5em;
+}
+
+form > button {
+  padding: 0.5em;
 }

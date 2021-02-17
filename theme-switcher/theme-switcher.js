@@ -1,9 +1,9 @@
 // DOM elements
 
+const body = document.body;
 const darkButton = document.getElementById("dark");
 const lightButton = document.getElementById("light");
 const solarButton = document.getElementById("solar");
-const body = document.body;
 
 // Apply the cached theme on reload
 
