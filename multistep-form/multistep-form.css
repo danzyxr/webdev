@@ -50,8 +50,9 @@ input.invalid {
 
 #nav-bar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+
   height: fit-content;
   margin-top: 0.65em;
 }

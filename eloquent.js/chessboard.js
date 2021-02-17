@@ -2,12 +2,14 @@
 
 let chess = " # # # #\n# # # # \n # # # #\n# # # # \n # # # #\n# # # # \n # # # #\n# # # # \n";
 
-console.log(chess);
+console.log(`Literally: \n\n${chess}`);
 
 // Chessboard w/ for loop
 
 let row_1 = " # # # #";
 let row_2 = "# # # # ";
+
+console.log("For loop chess:\n");
 
 for (let i = 1; i <= 8; i++) {
   if (i % 2 !== 0) {
@@ -22,6 +24,8 @@ for (let i = 1; i <= 8; i++) {
 
 let n = 13;
 let big_chess = "";
+
+console.log("\nn x n chess:\n");
 
 for (let i = 1; i <= n; i++) {
   for (let i = 1; i <= n; i++) {

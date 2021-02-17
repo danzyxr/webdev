@@ -10,13 +10,13 @@ function tabState(n) {
 
   tabs[n].style.display = "flex";
 
-  if (n == 0) {
+  if (n === 0) {
     prevBtn.style.display = "none";
   } else {
     prevBtn.style.display = "inline";
   }
 
-  if (n == tabs.length - 1) {
+  if (n === tabs.length - 1) {
     nextBtn.innerHTML = "Submit";
   } else {
     nextBtn.innerHTML = "Next";
@@ -42,7 +42,7 @@ function validateForm() {
   let steps = document.querySelectorAll(".step");
 
   for (let i = 0; i < tabInputs.length; i++) {
-    if (tabInputs[i].value == "") {
+    if (tabInputs[i].value === "") {
       tabInputs[i].className += " invalid";
       valid = false;
     }
@@ -56,7 +56,7 @@ function validateForm() {
 }
 
 function prevNext(pN) {
-  if (pN == 1 && !validateForm()) return false;
+  if (pN === 1 && !validateForm()) return false;
 
   let tabs = document.querySelectorAll(".tab");
   tabs[state].style.display = "none";

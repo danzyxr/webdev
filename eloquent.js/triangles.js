@@ -8,7 +8,7 @@ for (let i = 0; i < 7; i++) {
 
 // Triangle w/ string.length
 
-for (let muns = "$"; muns.length <= 7; muns += "$") {
+for (let muns = "$"; muns.length < 7; muns += "$") {
   console.log(muns);
 }
 
