@@ -1,5 +1,4 @@
 # webdev
 
-## random webdev things
-
-A compilation of small webdev projects, components, etc.
+Notes, Playground, & Vanilla.js 🍦
+This is where stubs for projects bud 🌱
