@@ -1,0 +1,31 @@
+{
+  "name": "webdev",
+  "version": "1.0.0",
+  "description": "Notes, Playground, & Vanilla.js 🍦 This is where stubs for projects bud 🌱",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danzyxr/webdev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danzyxr/webdev/issues"
+  },
+  "homepage": "https://github.com/danzyxr/webdev#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "@typescript-eslint/parser": "^4.16.1",
+    "eslint": "^7.21.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "prettier": "2.2.1"
+  }
+}
