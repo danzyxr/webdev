@@ -3,33 +3,33 @@ let state = 0;
 tabState(state);
 
 function tabState(n) {
-  let tabs = document.querySelectorAll("div.tab");
-  let steps = document.querySelectorAll("span.step");
-  let prevBtn = document.querySelector("#prev-btn");
-  let nextBtn = document.querySelector("#next-btn");
+  const tabs = document.querySelectorAll('div.tab');
+  let steps = document.querySelectorAll('span.step');
+  const prevBtn = document.querySelector('#prev-btn');
+  const nextBtn = document.querySelector('#next-btn');
 
-  tabs[n].style.display = "flex";
+  tabs[n].style.display = 'flex';
 
   if (n === 0) {
-    prevBtn.style.display = "none";
+    prevBtn.style.display = 'none';
   } else {
-    prevBtn.style.display = "inline";
+    prevBtn.style.display = 'inline';
   }
 
   if (n === tabs.length - 1) {
-    nextBtn.innerHTML = "Submit";
+    nextBtn.innerHTML = 'Submit';
   } else {
-    nextBtn.innerHTML = "Next";
+    nextBtn.innerHTML = 'Next';
   }
 
   const setActiveStep = function (step) {
-    steps = document.querySelectorAll(".step");
+    steps = document.querySelectorAll('.step');
 
     for (let i = 0; i < steps.length; i++) {
-      steps[i].className = steps[i].className.replace(" active", "");
+      steps[i].className = steps[i].className.replace(' active', '');
     }
 
-    steps[step].className += " active";
+    steps[step].className += ' active';
   };
 
   setActiveStep(n);
@@ -37,19 +37,19 @@ function tabState(n) {
 
 function validateForm() {
   let valid = true;
-  let tabs = document.querySelectorAll(".tab");
-  let tabInputs = tabs[state].querySelectorAll("input");
-  let steps = document.querySelectorAll(".step");
+  const tabs = document.querySelectorAll('.tab');
+  const tabInputs = tabs[state].querySelectorAll('input');
+  const steps = document.querySelectorAll('.step');
 
   for (let i = 0; i < tabInputs.length; i++) {
-    if (tabInputs[i].value === "") {
-      tabInputs[i].className += " invalid";
+    if (tabInputs[i].value === '') {
+      tabInputs[i].className += ' invalid';
       valid = false;
     }
   }
 
   if (valid) {
-    steps[state].className += " complete";
+    steps[state].className += ' complete';
   }
 
   return valid;
@@ -58,12 +58,12 @@ function validateForm() {
 function prevNext(pN) {
   if (pN === 1 && !validateForm()) return false;
 
-  let tabs = document.querySelectorAll(".tab");
-  tabs[state].style.display = "none";
+  const tabs = document.querySelectorAll('.tab');
+  tabs[state].style.display = 'none';
   state = state + pN;
 
   if (state >= tabs.length) {
-    document.querySelector("#register-form").submit();
+    document.querySelector('#register-form').submit();
     return false;
   }
 
