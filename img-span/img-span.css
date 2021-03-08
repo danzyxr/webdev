@@ -54,9 +54,9 @@ body {
 }
 
 .bg-1 {
-  background: url("./img/bg-1.gif");
+  background: url('./img/bg-1.gif');
 }
 
 .bg-2 {
-  background: url("./img/bg-2.gif");
+  background: url('./img/bg-2.gif');
 }

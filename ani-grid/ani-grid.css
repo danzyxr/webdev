@@ -10,10 +10,10 @@ body {
   grid-template-rows: repeat(4, 25%);
   gap: 1rem;
   grid-template-areas:
-    "a b c d"
-    "l m m e"
-    "k m m f"
-    "j i h g";
+    'a b c d'
+    'l m m e'
+    'k m m f'
+    'j i h g';
   --stagger-delay: 100ms;
 }
 
