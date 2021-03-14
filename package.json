@@ -2,7 +2,7 @@
   "name": "webdev",
   "version": "1.0.0",
   "description": "Notes, Playground, & Vanilla.js 🍦 This is where stubs for projects bud 🌱",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,8 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/danzyxr/webdev.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "danzyxr",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/danzyxr/webdev/issues"
