@@ -1,10 +1,10 @@
 console.log('asdf');
-setTimeout(function () {
+setTimeout(function() {
   console.log('timeout');
 }, 1000);
 console.log('qwerty');
 
-const getPosts = (resrc) => {
+const getPosts = (resource) => {
   return new Promise((resolve, reject) => {
     const request = new XMLHttpRequest();
 
@@ -17,7 +17,7 @@ const getPosts = (resrc) => {
       }
     });
 
-    request.open('GET', resrc);
+    request.open('GET', resource);
     request.send();
   });
 };
