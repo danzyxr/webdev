@@ -137,7 +137,6 @@ myOwnLoop(
 function every(arr, test) {
   for (ele of arr) {
     if (test(ele)) {
-      continue;
     } else {
       return false;
     }
