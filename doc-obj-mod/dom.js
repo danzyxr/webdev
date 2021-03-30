@@ -142,7 +142,7 @@ function inputValue(e) {
 const form = document.querySelector('form');
 form.innerHTML = 'asdf';
 
-const itemInput = document.querySelector('input[type=\'text\']');
+const itemInput = document.querySelector("input[type='text']");
 
 itemInput.addEventListener('keypress', inputValue);
 

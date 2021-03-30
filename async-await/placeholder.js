@@ -1,5 +1,5 @@
 console.log('asdf');
-setTimeout(function() {
+setTimeout(function () {
   console.log('timeout');
 }, 1000);
 console.log('qwerty');

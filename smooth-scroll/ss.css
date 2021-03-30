@@ -20,6 +20,14 @@ section {
   color: black;
 }
 
+nav a {
+  margin: 2em;
+  padding: 1.5em;
+  display: block;
+  border-radius: 50%;
+  border: 0.35em solid snow;
+}
+
 #page-1,
 nav a:nth-of-type(1) {
   background-color: lavender;
@@ -50,12 +58,4 @@ nav {
   right: 0;
   transform: translateY(-50%);
   position: fixed;
-}
-
-nav a {
-  margin: 2em;
-  padding: 1.5em;
-  display: block;
-  border-radius: 50%;
-  border: 0.35em solid snow;
 }

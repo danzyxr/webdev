@@ -22,7 +22,7 @@ function tabState(n) {
     nextBtn.innerHTML = 'Next';
   }
 
-  const setActiveStep = function(step) {
+  const setActiveStep = function (step) {
     steps = document.querySelectorAll('.step');
 
     for (let i = 0; i < steps.length; i++) {

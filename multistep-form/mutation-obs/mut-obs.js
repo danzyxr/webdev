@@ -8,7 +8,7 @@ console.log(add);
 console.log(btn);
 console.log(log);
 
-btn.onclick = function() {
+btn.onclick = function () {
   if (add.value) {
     const p = document.createElement('p');
     p.innerHTML = add.value;

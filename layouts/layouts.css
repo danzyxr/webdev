@@ -56,11 +56,8 @@ body {
 }
 
 .ex2-box {
-  /* stretch */
-  flex: 1 1 150px;
-
-  /* no stretch */
-  /* flex: 0 1 150px; */
+  flex: 1 1 150px; /* stretch */
+  flex: 0 1 150px; /* no stretch */
 }
 
 .ex3-parent {
