@@ -1,54 +1,54 @@
 <!DOCTYPE html>
-<html lang='en'>
-<head>
-  <meta charset='UTF-8' />
-  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-  <link rel='stylesheet' href='./multistep-form.css' />
-  <title>multistep form</title>
-</head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./multistep-form.css" />
+    <title>multistep form</title>
+  </head>
 
-<body>
-<form id='register-form' action=''>
-  <h1>Register:</h1>
+  <body>
+    <form id="register-form" action="">
+      <h1>Register:</h1>
 
-  <div class='tab'>
-    <label>Name:</label>
-    <input type='text' placeholder='First name' oninput="this.className = ''" />
-    <input type='text' placeholder='Last name' oninput="this.className = ''" />
-  </div>
+      <div class="tab">
+        <label>Name:</label>
+        <input type="text" placeholder="First name" oninput="this.className = ''" />
+        <input type="text" placeholder="Last name" oninput="this.className = ''" />
+      </div>
 
-  <div class='tab'>
-    <label>Contact:</label>
-    <input type='text' placeholder='Email' oninput="this.className = ''" />
-    <input type='text' placeholder='Phone' oninput="this.className = ''" />
-  </div>
+      <div class="tab">
+        <label>Contact:</label>
+        <input type="text" placeholder="Email" oninput="this.className = ''" />
+        <input type="text" placeholder="Phone" oninput="this.className = ''" />
+      </div>
 
-  <div class='tab'>
-    <label>Birthday:</label>
-    <input type='text' placeholder='Day' oninput="this.className = ''" />
-    <input type='text' placeholder='Month' oninput="this.className = ''" />
-    <input type='text' placeholder='Year' oninput="this.className = ''" />
-  </div>
+      <div class="tab">
+        <label>Birthday:</label>
+        <input type="text" placeholder="Day" oninput="this.className = ''" />
+        <input type="text" placeholder="Month" oninput="this.className = ''" />
+        <input type="text" placeholder="Year" oninput="this.className = ''" />
+      </div>
 
-  <div class='tab'>
-    <label>Login:</label>
-    <input type='text' placeholder='Username' oninput="this.className = ''" />
-    <input type='text' placeholder='Password' oninput="this.className = ''" />
-  </div>
+      <div class="tab">
+        <label>Login:</label>
+        <input type="text" placeholder="Username" oninput="this.className = ''" />
+        <input type="text" placeholder="Password" oninput="this.className = ''" />
+      </div>
 
-  <div id='nav-bar' style='overflow: auto'>
-    <div id='step-container' style='float: left'>
-      <span class='step'></span>
-      <span class='step'></span>
-      <span class='step'></span>
-      <span class='step'></span>
-    </div>
-    <div id='btn-container' style='float: right'>
-      <button id='prev-btn' type='button' onclick='prevNext(-1)'>Prev</button>
-      <button id='next-btn' type='button' onclick='prevNext(1)'>Next</button>
-    </div>
-  </div>
-</form>
-<script src='./multistep-form.js'></script>
-</body>
+      <div id="nav-bar" style="overflow: auto">
+        <div id="step-container" style="float: left">
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+        </div>
+        <div id="btn-container" style="float: right">
+          <button id="prev-btn" type="button" onclick="prevNext(-1)">Prev</button>
+          <button id="next-btn" type="button" onclick="prevNext(1)">Next</button>
+        </div>
+      </div>
+    </form>
+    <script src="./multistep-form.js"></script>
+  </body>
 </html>
