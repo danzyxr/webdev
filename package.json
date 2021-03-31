@@ -1,6 +1,7 @@
 {
   "name": "webdev",
   "version": "1.0.0",
+  "type": "module",
   "description": "Notes, Playground, & Vanilla.js 🍦 This is where stubs for projects bud 🌱",
   "main": "",
   "scripts": {
