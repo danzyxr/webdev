@@ -1,15 +1,15 @@
-const g = (n) => n + 1;
-const f = (n) => n * 2;
+const f = (n) => n + 1;
+const g = (n) => n * 2;
 
-const composer = (f, g, x) => {
-  return f(g(x));
+const composer = (fnA, fnB, x) => {
+  return fnA(fnB(x));
 };
 
 console.log(composer(f, g, 20));
 
 Promise.resolve(20)
-  .then(g)
   .then(f)
+  .then(g)
   .then((x) => console.log(x));
 
 const trace = (label) => (value) => {
