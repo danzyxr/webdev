@@ -23,11 +23,11 @@ div.tab {
 #register-form {
   width: 50em;
   margin: 3em auto;
-  border: solid 1em #ffaaff;
+  border: solid 1em #faf;
   border-radius: 10px;
   padding: 1em 3em;
-  color: #eeeeee;
-  background-color: #333333;
+  color: #eee;
+  background-color: #333;
 }
 
 label {
@@ -39,13 +39,13 @@ input {
   width: 100%;
   margin: 3px 0 3px 0;
   margin-top: 0.5em;
-  border: 1px solid #f0f0f0;
+  border: 1px solid #fff;
   padding: 1em;
   font-size: 1.15rem;
 }
 
 input.invalid {
-  background-color: #ff7272;
+  background-color: crimson;
 }
 
 #nav-bar {
@@ -64,7 +64,7 @@ button {
   font-size: 1.15rem;
   font-weight: bold;
   color: #333;
-  background-color: #ffaaff;
+  background-color: lightpink;
   cursor: pointer;
 }
 
@@ -84,7 +84,7 @@ span.step {
   margin-left: 0.5em;
   border: none;
   border-radius: 50%;
-  background-color: #44ffdd;
+  background-color: lightskyblue;
   opacity: 50%;
 }
 
@@ -93,5 +93,5 @@ span.step.active {
 }
 
 span.step.complete {
-  background-color: #69ff55;
+  background-color: lightgreen;
 }
