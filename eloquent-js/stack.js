@@ -27,42 +27,43 @@ if (revw === word) {
 
 // Building the stack
 
-const Stack = function () {
-  this.count = 0;
-  this.storage = {};
+class Stack {
+  constructor() {
+    this.count = 0;
+    this.storage = {};
+  }
 
-  this.push = function (value) {
+  push(value) {
     this.storage[this.count] = value;
     this.count++;
-  };
+  }
 
-  this.pop = function () {
+  pop() {
     if (this.count === 0) {
       return undefined;
     }
-
     this.count--;
     const result = this.storage[this.count];
     delete this.storage[this.count];
     return result;
-  };
+  }
 
-  this.peek = function () {
+  peek() {
     return this.storage[this.count - 1];
-  };
+  }
 
-  this.getStack = function () {
+  getStack() {
     return this.storage;
-  };
+  }
 
-  this.isEmpty = function () {
+  isEmpty() {
     if (this.count === 0) return true;
-  };
+  }
 
-  this.size = function () {
+  size() {
     return this.count;
-  };
-};
+  }
+}
 
 // Using the stack
 

@@ -1,76 +1,75 @@
-function MySet() {
-  const collection = [];
+class MySet {
+  constructor(data = new Array()) {
+    this.collection = data;
+  }
 
-  this.has = (ele) => {
-    return collection.indexOf(ele) !== -1;
-  };
+  has(ele) {
+    return this.collection.indexOf(ele) !== -1;
+  }
 
-  this.values = () => {
-    return collection;
-  };
+  values() {
+    return this.collection;
+  }
 
-  this.add = function (ele) {
+  add(ele) {
     if (!this.has(ele)) {
-      collection.push(ele);
+      this.collection.push(ele);
       return true;
+    } else {
+      return false;
     }
+  }
 
-    return false;
-  };
-
-  this.remove = function (ele) {
+  remove(ele) {
     if (this.has(ele)) {
-      const index = collection.indexOf(ele);
-      collection.splice(index, 1);
+      const index = this.collection.indexOf(ele);
+      this.collection.splice(index, 1);
       return true;
+    } else {
+      return false;
     }
+  }
 
-    return false;
-  };
+  size() {
+    return this.collection.length;
+  }
 
-  this.size = () => {
-    return collection.length;
-  };
-
-  this.unite = function (set) {
+  unite(otherSet) {
     const union = new MySet();
     const setA = this.values();
-    const setB = set.values();
+    const setB = otherSet.values();
 
     setA.forEach((ele) => {
       union.add(ele);
     });
-
     setB.forEach((ele) => {
       union.add(ele);
     });
 
     return union;
-  };
+  }
 
-  this.intersect = function (set) {
+  intersect(otherSet) {
     const intersection = new MySet();
     this.values().forEach((ele) => {
-      if (set.has(ele)) intersection.add(ele);
+      if (otherSet.has(ele)) intersection.add(ele);
     });
-
     return intersection;
-  };
+  }
 
-  this.differ = function (set) {
+  differ(otherSet) {
     const difference = new MySet();
     this.values().forEach((ele) => {
-      if (!set.has(ele)) difference.add(ele);
+      if (!otherSet.has(ele)) difference.add(ele);
     });
-
     return difference;
-  };
+  }
 
-  this.subset = function (superset) {
+  subset(superSet) {
     return this.values().every((ele) => {
-      return superset.has(ele);
+      return superSet.has(ele);
     });
-  };
+  }
 }
 
 const setA = new MySet();
@@ -92,8 +91,6 @@ setB.add('3');
 
 console.log(setA.subset(setB));
 console.log(setB.intersect(setA).values());
-
 console.log(setB.differ(setA).values());
 console.log(setA.differ(setB).values());
-
 console.log(setA.unite(setB).values());

@@ -46,7 +46,6 @@ class LinkedList {
     let count = 0;
     let current = this.head;
     let previous = null;
-
     const node = new Node(data);
 
     while (count < index) {
