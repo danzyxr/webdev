@@ -8,7 +8,6 @@ class Group {
 
   has(val) {
     return this.elems.includes(val);
-    // return this.elems.indexOf(val) !== -1;
   }
 
   add(val) {
@@ -23,8 +22,6 @@ class Group {
   delete(val) {
     if (this.has(val)) {
       this.elems = this.elems.filter((v) => v !== val);
-      // let index = this.elems.indexOf(val);
-      // this.elems.splice(index, 1);
       return this;
     } else {
       return false;
