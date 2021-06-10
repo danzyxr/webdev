@@ -10,8 +10,7 @@ const Warlock = {
 console.log(Object.keys(Warlock));
 
 function createCharacter(prof, name) {
-  const newCharacter = {};
-  Object.assign(newCharacter, prof);
+  const newCharacter = Object.assign({}, prof);
   newCharacter.name = name;
   return newCharacter;
 }
