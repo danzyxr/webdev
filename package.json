@@ -1,7 +1,8 @@
 {
+  "type": "module",
   "devDependencies": {
-    "eslint": "^7.27.0",
+    "eslint": "^7.28.0",
     "eslint-prettier-config": "^1.0.1",
-    "prettier": "^2.3.0"
+    "prettier": "^2.3.1"
   }
 }
